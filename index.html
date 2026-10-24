@@ -279,13 +279,13 @@ function render(){
     "grid-rental": LISTINGS.filter(l => l.status === "Tenanted"),
     "grid-land": LISTINGS.filter(l => l.type === "Land")
   };
-  let total = 0;
+  const seen = new Set();
   for (const id in groups){
     const shown = groups[id].filter(l => passes(l, f));
-    total += shown.length;
+    shown.forEach(l => seen.add(l.ref));
     document.getElementById(id).innerHTML = shown.length ? shown.map(card).join("") : '<div class="empty">No matching properties in this section. Try widening the filters.</div>';
   }
-  document.getElementById("resultCount").textContent = total + " properties match";
+  document.getElementById("resultCount").textContent = seen.size + " properties match";
 }
 function applyFilters(){ render(); document.getElementById("browse").scrollIntoView({behavior:"smooth"}); }
 function resetFilters(){
