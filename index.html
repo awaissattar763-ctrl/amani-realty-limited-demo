@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amani Realty Limited — Property • Investment • Returns</title>
-<meta name="description" content="Amani Realty Limited — discover residential, commercial and investment opportunities in Pakistan and Dubai. Concept demo.">
-<meta property="og:title" content="Amani Realty Limited — Property • Investment • Returns">
-<meta property="og:description" content="Discover residential, commercial and investment opportunities in Pakistan and Dubai.">
+<title>Amani Realty Limited — Karachi Properties</title>
+<meta name="description" content="Amani Realty Limited — Karachi properties: ready to move, off-plan and investment shops. Concept demo.">
+<meta property="og:title" content="Amani Realty Limited — Karachi Properties">
+<meta property="og:description" content="Karachi properties: ready to move, off-plan and investment shops.">
 <style>
 :root{--green:#0e2a1d;--green2:#123524;--gold:#c9a86a;--gold2:#e6c98a;--ink:#1d2a22;--mut:#5c6b61;--bg:#f7f5f0;--card:#fff;--line:#e5ddd0}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -28,8 +28,8 @@ nav a:hover{color:var(--gold)}
 .btn{display:inline-block;background:var(--gold);color:#241a05;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:bold;padding:12px 22px;border-radius:6px;border:0;cursor:pointer;font-size:15px}
 .btn:hover{background:var(--gold2)}
 .btn.outline{background:transparent;color:#fff;border:2px solid var(--gold)}
-.btn.wa{background:#1faa55;color:#fff}
 .btn.small{padding:8px 14px;font-size:13px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
 .searchbar{max-width:1000px;margin:-26px auto 0;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative;z-index:5}
 .searchbar label{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;color:var(--mut);letter-spacing:.5px;text-transform:uppercase}
 .searchbar select,.searchbar input{width:100%;padding:10px;border:1px solid #cfc7b8;border-radius:6px;font-size:15px;margin-top:4px;background:#fff}
@@ -58,9 +58,19 @@ h2{font-size:30px;color:var(--green);margin-bottom:6px}
 .calc .out b{font-size:22px;color:var(--green)}
 .formula{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:var(--mut);margin-top:8px}
 .disclaimer{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#8a6d1d;background:#fdf3d7;border:1px solid var(--gold);border-radius:8px;padding:12px;margin-top:14px}
-form.inquiry{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:12px}
-form.inquiry input,form.inquiry select,form.inquiry textarea{width:100%;padding:11px;border:1px solid #cfc7b8;border-radius:6px;font-size:15px}
-form.inquiry label{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:var(--mut)}
+form.funnel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:12px}
+form.funnel input,form.funnel select,form.funnel textarea{width:100%;padding:11px;border:1px solid #cfc7b8;border-radius:6px;font-size:15px}
+form.funnel label{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:var(--mut)}
+.fstep{display:none}
+.fstep.on{display:block}
+.progress{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:var(--green);letter-spacing:.5px}
+.optrow{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 4px}
+.opt{border:1px solid #cfc7b8;border-radius:8px;padding:12px 16px;cursor:pointer;font-family:Arial,Helvetica,sans-serif;font-size:15px;background:#fff}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{border-color:var(--gold);background:#fdf3d7;font-weight:bold}
+.subblock{display:none}
+.subblock.on{display:block}
+.otpbox{background:#f3efe6;border:1px solid var(--gold);border-radius:8px;padding:14px;font-family:Arial,Helvetica,sans-serif;margin-top:8px}
 table{width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:14px;background:#fff}
 th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
 th{background:var(--green);color:#fff}
@@ -88,71 +98,46 @@ footer b{color:#fff}
       <span><b>AMANI REALTY</b><span>LIMITED</span></span>
     </a>
     <nav>
-      <a href="#pakistan">Pakistan</a><a href="#dubai">Dubai</a><a href="#offplan">Off-Plan</a><a href="#rental">Rental Income</a><a href="#land">Land &amp; Plots</a><a href="#guide">Investment Guide</a><a href="#about">About</a><a href="#leads">Leads / CRM</a><a href="#contact">Contact</a>
+      <a href="#browse">Karachi Properties</a><a href="#guide">Investment Guide</a><a href="#about">About</a><a href="#leads">Leads / CRM</a><a href="#inquiry">Inquiry Form</a>
     </nav>
   </div>
 </header>
 
 <section class="hero" id="top">
-  <h1>Find Your Property. Build Your Future.</h1>
-  <p>Discover residential, commercial and investment opportunities in Pakistan and Dubai.</p>
+  <h1>Find Your Property in Karachi.</h1>
+  <p>Ready to move, off-plan and investment shops — one short form, and we call you back. No random calls, no wasted time.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
     <a class="btn" href="#browse">Explore Properties</a>
-    <a class="btn outline" href="#guide">Investment Options</a>
-    <a class="btn outline" href="#contact">Contact an Advisor</a>
+    <a class="btn outline" href="#inquiry">Start Inquiry</a>
   </div>
 </section>
 
 <div class="wrap" id="browse">
   <div class="searchbar" id="filters">
-    <div><label>Country</label><select id="fCountry"><option value="">All countries</option><option>Pakistan</option><option>Dubai</option></select></div>
-    <div><label>City</label><select id="fCity"><option value="">All cities</option><option>Karachi</option><option>Lahore</option><option>Islamabad</option><option>Dubai</option></select></div>
-    <div><label>Property Type</label><select id="fType"><option value="">All types</option><option>Apartment</option><option>House / Villa</option><option>Shop</option><option>Land</option></select></div>
-    <div><label>Budget</label><select id="fBudget"><option value="">Any budget</option><option value="PKR-0-15000000">PKR under 15M</option><option value="PKR-15000000-30000000">PKR 15M – 30M</option><option value="PKR-30000000-999999999">PKR over 30M</option><option value="AED-0-1500000">AED under 1.5M</option><option value="AED-1500000-3000000">AED 1.5M – 3M</option><option value="AED-3000000-999999999">AED over 3M</option></select></div>
+    <div><label>Area (Karachi)</label><select id="fArea"><option value="">All areas</option><option>DHA Phase 1</option><option>DHA Phase 2</option><option>DHA Phase 8</option><option>Tariq Road</option><option>PECHS</option><option>Gulshan-e-Iqbal</option><option>Gulistan-e-Johar</option><option>North Karachi</option></select></div>
+    <div><label>Looking For</label><select id="fCat"><option value="">All categories</option><option>Ready to Move</option><option>Off-Plan</option><option>Tenanted</option></select></div>
+    <div><label>Property Type</label><select id="fType"><option value="">All types</option><option>Apartment</option><option>House</option><option>Shop</option></select></div>
+    <div><label>Budget (PKR)</label><select id="fBudget"><option value="">Any budget</option><option value="0-15000000">Under 15M</option><option value="15000000-30000000">15M – 30M</option><option value="30000000-999999999">Over 30M</option></select></div>
     <div><label>Payment Method</label><select id="fPay"><option value="">Any method</option><option>Cash</option><option>Bank Finance</option><option>Installments</option></select></div>
-    <div><label>Status</label><select id="fStatus"><option value="">Any status</option><option>Ready to Move</option><option>Off-Plan</option><option>Tenanted</option><option>Land Sale</option></select></div>
     <div class="full"><button class="btn" onclick="applyFilters()">Search Properties</button> <button class="btn outline" style="color:var(--green);border-color:var(--green)" onclick="resetFilters()">Reset</button><span id="resultCount" style="font-family:Arial,Helvetica,sans-serif;color:var(--mut);margin-left:10px"></span></div>
   </div>
 </div>
 
 <div class="wrap">
-  <h2 id="pakistan">Pakistan Properties</h2>
-  <p class="sec-sub">Residential &amp; commercial — ready-to-move, installment and land opportunities.</p>
-  <div class="grid" id="grid-pakistan"></div>
-</div>
-
-<div class="wrap">
-  <h2 id="dubai">Dubai Properties</h2>
-  <p class="sec-sub">Residential &amp; commercial — ready homes and investment units.</p>
-  <div class="grid" id="grid-dubai"></div>
-</div>
-
-<div class="wrap">
-  <h2 id="offplan">Off-Plan Projects</h2>
-  <p class="sec-sub">Under-construction and newly launched developments on installment plans.</p>
-  <div class="grid" id="grid-offplan"></div>
-</div>
-
-<div class="wrap">
-  <h2 id="rental">Rental Income</h2>
-  <p class="sec-sub">Commercial shops and units with existing tenants — income figures shown are sample figures, not verified rent.</p>
-  <div class="grid" id="grid-rental"></div>
-</div>
-
-<div class="wrap">
-  <h2 id="land">Land &amp; Plots</h2>
-  <p class="sec-sub">Residential and commercial plots — cash-sale opportunities (sample listings).</p>
-  <div class="grid" id="grid-land"></div>
+  <h2>Karachi Properties</h2>
+  <p class="sec-sub">Ready-to-move homes, off-plan projects and tenanted shops — sample listings only.</p>
+  <div class="grid" id="grid-karachi"></div>
 </div>
 
 <div class="wrap" id="guide">
   <h2>Investment Guide</h2>
-  <p class="sec-sub">Three kinds of clients, one approach: buy to live, buy to invest, or buy for rental income. Use the calculator to test the numbers — then talk to an advisor before deciding.</p>
+  <p class="sec-sub">Three kinds of buyers, one approach: buy to live, buy off-plan, or buy for rental income. Use the calculator to test the numbers — then talk to an advisor before deciding.</p>
   <div class="guide">
     <div>
       <h3 style="color:var(--green)">Buying process</h3>
       <ol style="font-family:Arial,Helvetica,sans-serif;padding-left:20px;margin-top:8px">
-        <li>Choose a property and send an inquiry (WhatsApp or the form).</li>
+        <li>Choose what you are looking for and fill the inquiry form.</li>
+        <li>Verify your number with the OTP step.</li>
         <li>Discuss budget, payment method and possession timeline.</li>
         <li>Verify price, ownership and approvals before any payment.</li>
         <li>Complete the purchase through the proper legal channel.</li>
@@ -162,8 +147,8 @@ footer b{color:#fff}
     </div>
     <div class="calc">
       <h3 style="color:var(--green)">Rental Yield Calculator</h3>
-      <label>Purchase price</label><input id="cPrice" type="number" value="1500000" min="0">
-      <label>Monthly rent</label><input id="cRent" type="number" value="10000" min="0">
+      <label>Purchase price (PKR)</label><input id="cPrice" type="number" value="15000000" min="0">
+      <label>Monthly rent (PKR)</label><input id="cRent" type="number" value="100000" min="0">
       <label>Annual expenses (service, maintenance, management)</label><input id="cExp" type="number" value="0" min="0">
       <button class="btn" onclick="calcYield()">Calculate</button>
       <div class="out" style="margin-top:14px">
@@ -178,13 +163,13 @@ footer b{color:#fff}
 
 <div class="wrap" id="about">
   <h2>About Us</h2>
-  <p style="font-family:Arial,Helvetica,sans-serif;max-width:800px">Amani Realty Limited is a property sales and investment consultancy serving the Pakistan and Dubai property markets. We help home buyers find a place to live, investors compare cash, finance and installment options, and income investors review tenanted commercial properties with clear, transparent information. This website is a concept demo showing how that service can look online.</p>
+  <p style="font-family:Arial,Helvetica,sans-serif;max-width:800px">Amani Realty Limited is a property sales and investment consultancy focused on Karachi. We help home buyers find a place to live, buyers compare cash, finance and installment options, and income investors review tenanted commercial properties with clear, transparent information. This website is a concept demo showing how that service can look online.</p>
   <h3 style="color:var(--green);margin-top:20px">Why choose Amani Realty Limited?</h3>
   <ul style="font-family:Arial,Helvetica,sans-serif;padding-left:20px;margin-top:8px">
-    <li>One structure for Pakistan and Dubai — easy to compare.</li>
+    <li>One short form — no repeated calls, no wasted time.</li>
     <li>Clear payment information: cash, bank finance or installments.</li>
     <li>Rental income shown separately from projections — no guaranteed returns.</li>
-    <li>Every inquiry answered on WhatsApp and tracked in one place.</li>
+    <li>Every inquiry verified and tracked in one place.</li>
   </ul>
 </div>
 
@@ -192,116 +177,264 @@ footer b{color:#fff}
   <h2>Leads / CRM</h2>
   <p class="sec-sub">Inquiries sent through the form below appear here on this device. Change a lead's status as you follow up: New → Contacted → Site Visit → Closed.</p>
   <div class="tablewrap"><table>
-    <thead><tr><th>Date</th><th>Property Ref</th><th>Name</th><th>Phone</th><th>Message</th><th>Status</th></tr></thead>
+    <thead><tr><th>Date</th><th>Looking For</th><th>Area</th><th>Type</th><th>Phone</th><th>Details</th><th>OTP</th><th>Status</th></tr></thead>
     <tbody id="leadsBody"></tbody>
   </table></div>
   <p id="noLeads" class="empty" style="margin-top:12px">No inquiries yet — submit the form below to see a lead appear here.</p>
 </div>
 
-<div class="wrap" id="contact">
-  <h2>Contact Us</h2>
-  <p class="sec-sub">Send an inquiry about any property, or ask for a consultation. We reply on WhatsApp.</p>
-  <form class="inquiry" id="inquiryForm">
-    <div><label>Property reference</label><select id="qRef"></select></div>
-    <div><label>Your name</label><input id="qName" required placeholder="Full name"></div>
-    <div><label>Phone / WhatsApp number</label><input id="qPhone" required placeholder="e.g. +92 3XX XXXXXXX"></div>
-    <div><label>Message</label><textarea id="qMsg" rows="3" placeholder="I am interested in this property. Please share details."></textarea></div>
-    <div><button class="btn" type="submit">Save Inquiry</button> <a class="btn wa" id="formWa" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-    <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:var(--mut)">By submitting, you share your name, phone and message so we can respond to your inquiry. Inquiries are stored on this device only in this demo.</p>
+<div class="wrap" id="inquiry">
+  <h2>Property Inquiry</h2>
+  <p class="sec-sub">Answer a few questions so we know exactly what you are looking for. Only genuine, verified inquiries are contacted — quality over quantity.</p>
+  <form class="funnel" id="funnelForm">
+    <div class="progress" id="progressText">Step 1 of 5 — What are you looking for?</div>
+
+    <div class="fstep on" id="step-1">
+      <label>I am looking for</label>
+      <div class="optrow" id="catRow">
+        <button type="button" class="opt" data-cat="Ready to Move" onclick="setCat('Ready to Move', this)">Ready to Move</button>
+        <button type="button" class="opt" data-cat="Off-Plan" onclick="setCat('Off-Plan', this)">Off-Plan</button>
+        <button type="button" class="opt" data-cat="Investment" onclick="setCat('Investment', this)">Investment (Shop)</button>
+      </div>
+    </div>
+
+    <div class="fstep" id="step-2">
+      <div class="subblock" id="sub-ready">
+        <label>Payment method</label>
+        <div class="optrow" id="payRow">
+          <button type="button" class="opt" onclick="setPay('Cash', this)">Cash</button>
+          <button type="button" class="opt" onclick="setPay('Installments', this)">Installments</button>
+        </div>
+        <div class="subblock" id="sub-fin" style="margin-top:10px">
+          <label>Finance option</label>
+          <div class="optrow" id="finRow">
+            <button type="button" class="opt" onclick="setFin('Bank Finance', this)">Bank Finance</button>
+            <button type="button" class="opt" onclick="setFin('PM Housing Scheme', this)">PM Housing Scheme</button>
+          </div>
+        </div>
+      </div>
+      <div class="subblock" id="sub-offplan">
+        <label>Project stage</label>
+        <div class="optrow" id="stageRow">
+          <button type="button" class="opt" onclick="setStage('Nearly Possession', this)">Nearly Possession</button>
+          <button type="button" class="opt" onclick="setStage('Launched — Construction Started', this)">Launched — Construction Started</button>
+          <button type="button" class="opt" onclick="setStage('Pre-Launch', this)">Pre-Launch</button>
+        </div>
+      </div>
+      <div class="subblock" id="sub-invest">
+        <label>Shop type</label>
+        <div class="optrow" id="shopRow">
+          <button type="button" class="opt" onclick="setShop('Already Rented — Brand Tenant', this)">Already Rented — Brand Tenant</button>
+          <button type="button" class="opt" onclick="setShop('Empty Shop', this)">Empty Shop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fstep" id="step-3">
+      <div><label>Area (Karachi)</label><select id="fAreaSel">
+        <option value="">Select area</option><option>DHA Phase 1</option><option>DHA Phase 2</option><option>DHA Phase 8</option><option>Tariq Road</option><option>PECHS</option><option>Gulshan-e-Iqbal</option><option>Gulistan-e-Johar</option><option>North Karachi</option><option>Other Karachi area</option>
+      </select></div>
+      <div style="margin-top:10px"><label>Property type</label>
+        <div class="optrow" id="typeRow">
+          <button type="button" class="opt" onclick="setType('Apartment', this)">Apartment</button>
+          <button type="button" class="opt" onclick="setType('House', this)">House</button>
+          <button type="button" class="opt" onclick="setType('Shop', this)">Shop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fstep" id="step-4">
+      <div><label>WhatsApp number</label><input id="fPhone" placeholder="e.g. +92 3XX XXXXXXX"></div>
+      <div style="margin-top:10px"><label>Current address (where do you live now?)</label><input id="fAddr" placeholder="Current area / address"></div>
+      <div class="subblock" id="sub-capacity" style="margin-top:10px">
+        <div><label>Monthly installment you can pay (PKR)</label><input id="fInst" type="number" min="0" placeholder="e.g. 100000"></div>
+        <div style="margin-top:10px"><label>Down payment you can pay (PKR)</label><input id="fDown" type="number" min="0" placeholder="e.g. 2000000"></div>
+      </div>
+    </div>
+
+    <div class="fstep" id="step-5">
+      <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px">We verify every number before calling back, so only genuine inquiries are contacted.</p>
+      <div class="otpbox" id="otpBox">
+        <div id="otpBefore">
+          <button class="btn small" type="button" onclick="sendOtp()">Send OTP to my number</button>
+          <p style="font-size:12px;color:#8a6d1d;margin-top:8px">Demo simulation — in this demo any 4-digit code is accepted. Live verification connects at build stage.</p>
+        </div>
+        <div id="otpAfter" style="display:none">
+          <p style="font-size:14px">Demo code sent: <b>1234</b> (simulation). Enter it below:</p>
+          <input id="otpInput" maxlength="4" placeholder="4-digit code" style="max-width:200px;margin-top:8px">
+          <button class="btn small" type="button" onclick="verifyOtp()" style="margin-left:8px">Verify</button>
+          <p id="otpMsg" style="font-size:13px;margin-top:8px"></p>
+        </div>
+        <div id="otpDone" style="display:none">
+          <p style="font-weight:bold;color:#0e2a1d">✓ Number verified (demo simulation).</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+      <button class="btn outline" style="color:var(--green);border-color:var(--green)" type="button" id="backBtn" onclick="goBack()" disabled>Back</button>
+      <button class="btn" type="button" id="nextBtn" onclick="goNext()">Next</button>
+      <button class="btn" type="submit" id="submitBtn" style="display:none">Submit Inquiry</button>
+    </div>
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:var(--mut)">By submitting, you share your answers so we can respond to your inquiry. Inquiries are stored on this device only in this demo.</p>
   </form>
-  <p id="formDone" style="display:none;font-family:Arial,Helvetica,sans-serif;background:#e8f5ec;border:1px solid #1faa55;border-radius:8px;padding:12px;margin-top:14px">Inquiry saved. It now appears in the Leads / CRM table above.</p>
+  <p id="formDone" style="display:none;font-family:Arial,Helvetica,sans-serif;background:#e8f5ec;border:1px solid #1faa55;border-radius:8px;padding:12px;margin-top:14px">Inquiry saved and number verified. It now appears in the Leads / CRM table above.</p>
 </div>
 
 <div class="stickybar">
-  <a class="btn wa" href="https://wa.me/923352221370" target="_blank" rel="noopener">WhatsApp Us</a>
-  <a class="btn" href="#contact">Enquire Now</a>
+  <a class="btn" href="#inquiry">Start Inquiry</a>
 </div>
 
 <footer>
   <b>AMANI REALTY LIMITED</b> — Property • Investment • Returns<br>
-  Pakistan • Dubai &nbsp;|&nbsp; WhatsApp: +92 335 2221370 &nbsp;|&nbsp; amanirealtylimited.com<br>
+  Karachi, Pakistan &nbsp;|&nbsp; amanirealtylimited.com<br>
   <span style="font-size:12px;color:#9db0a2">Concept demo — sample listings only, not verified offers. Verify price, ownership and approvals before any transaction.</span>
 </footer>
 
 <script>
-const WA = "923352221370";
 const U = (id) => "https://images.unsplash.com/" + id + "?auto=format&fit=crop&w=900&q=80";
 const LISTINGS = [
- {ref:"PK-001",country:"Pakistan",city:"Karachi",type:"Apartment",title:"2-Bedroom Apartment — Karachi",price:"PKR 12,500,000",num:12500000,cur:"PKR",status:"Ready to Move",pay:["Cash","Bank Finance"],spec:"2 Beds · 2 Baths · 1,150 sq ft",img:U("photo-1522708323590-d24dbb6b0267"),desc:"Ready-to-move apartment for a family home or first investment."},
- {ref:"PK-002",country:"Pakistan",city:"Lahore",type:"House / Villa",title:"5-Marla House — Lahore",price:"PKR 28,500,000",num:28500000,cur:"PKR",status:"Ready to Move",pay:["Cash","Bank Finance"],spec:"3 Beds · 3 Baths · 5 Marla",img:U("photo-1600596542815-ffad4c1539a9"),desc:"Ready house in a residential area, cash or eligible bank finance."},
- {ref:"PK-003",country:"Pakistan",city:"Karachi",type:"Shop",title:"Commercial Shop — Karachi",price:"PKR 18,000,000",num:18000000,cur:"PKR",status:"Ready to Move",pay:["Cash"],spec:"Ground floor · Main road front",img:U("photo-1441986300917-64674bd600d8"),desc:"High-street commercial shop, cash purchase."},
- {ref:"PK-004",country:"Pakistan",city:"Islamabad",type:"Land",title:"10-Marla Residential Plot — Islamabad",price:"PKR 9,800,000",num:9800000,cur:"PKR",status:"Land Sale",pay:["Cash"],spec:"10 Marla · Residential use",img:U("photo-1500382017468-9049fed747ef"),desc:"Residential plot for building or holding. Verify title and approvals before purchase."},
- {ref:"DXB-001",country:"Dubai",city:"Dubai",type:"Apartment",title:"Premium 2-Bedroom Apartment — Dubai",price:"AED 1,500,000",num:1500000,cur:"AED",status:"Ready to Move",pay:["Cash","Bank Finance"],spec:"2 Beds · 2 Baths · Ready to move",img:U("photo-1560448204-e02f11c3d0e2"),desc:"Sample listing only — this price is illustrative, not a current offer."},
- {ref:"DXB-002",country:"Dubai",city:"Dubai",type:"Apartment",title:"Off-Plan 1-Bedroom Apartment — Dubai",price:"AED 950,000",num:950000,cur:"AED",status:"Off-Plan",pay:["Installments"],spec:"1 Bed · 1 Bath · Under construction",img:U("photo-1545324418-cc1a3fa10c00"),desc:"Off-plan project on an installment plan.",plan:"Sample schedule: Booking 10% · Down payment 20% · Monthly installments · Expected possession 2028 (sample dates only)."},
- {ref:"DXB-003",country:"Dubai",city:"Dubai",type:"House / Villa",title:"4-Bedroom Villa — Dubai",price:"AED 3,900,000",num:3900000,cur:"AED",status:"Ready to Move",pay:["Cash","Bank Finance"],spec:"4 Beds · 4 Baths · Private garden",img:U("photo-1613490493576-7fde63acd811"),desc:"Ready family villa, cash or eligible finance."},
- {ref:"RENT-001",country:"Dubai",city:"Dubai",type:"Shop",title:"Tenanted Brand Shop — Dubai",price:"AED 2,400,000",num:2400000,cur:"AED",status:"Tenanted",pay:["Cash"],spec:"Leased commercial unit · Existing tenant",img:U("photo-1486406146926-c627a92ad1ab"),desc:"Commercial unit with an existing tenant agreement (sample).",rent:"Sample monthly rent: AED 14,000 — sample gross yield 7.0% on these figures."},
- {ref:"RENT-002",country:"Pakistan",city:"Karachi",type:"Shop",title:"Tenanted Commercial Shop — Karachi",price:"PKR 22,000,000",num:22000000,cur:"PKR",status:"Tenanted",pay:["Cash"],spec:"Leased shop · Existing tenant",img:U("photo-1472851294608-062f824d29cc"),desc:"Commercial shop with an existing tenant agreement (sample).",rent:"Sample monthly rent: PKR 150,000 — sample gross yield 8.2% on these figures."}
+ {ref:"KHI-001",area:"DHA Phase 2",type:"Apartment",title:"2-Bedroom Apartment — DHA Phase 2",price:"PKR 12,500,000",num:12500000,cat:"Ready to Move",pay:["Cash","Bank Finance"],spec:"2 Beds · 2 Baths · 1,150 sq ft",img:U("photo-1522708323590-d24dbb6b0267"),desc:"Ready-to-move apartment for a family home or first investment."},
+ {ref:"KHI-002",area:"Gulshan-e-Iqbal",type:"House",title:"3-Bedroom House — Gulshan-e-Iqbal",price:"PKR 28,500,000",num:28500000,cat:"Ready to Move",pay:["Cash","Bank Finance"],spec:"3 Beds · 3 Baths · 120 sq yd",img:U("photo-1600596542815-ffad4c1539a9"),desc:"Ready house in a residential area, cash or eligible bank finance."},
+ {ref:"KHI-003",area:"Tariq Road",type:"Shop",title:"Commercial Shop — Tariq Road",price:"PKR 18,000,000",num:18000000,cat:"Ready to Move",pay:["Cash"],spec:"Ground floor · Main road front",img:U("photo-1441986300917-64674bd600d8"),desc:"High-street commercial shop, cash purchase."},
+ {ref:"KHI-004",area:"DHA Phase 8",type:"Apartment",title:"Off-Plan 2-Bedroom Apartment — DHA Phase 8",price:"PKR 9,800,000",num:9800000,cat:"Off-Plan",pay:["Installments"],spec:"2 Beds · 2 Baths · Under construction",img:U("photo-1545324418-cc1a3fa10c00"),desc:"Off-plan project on an installment plan.",plan:"Sample schedule: Booking 10% · Down payment 20% · Monthly installments · Expected possession 2028 (sample dates only)."},
+ {ref:"KHI-005",area:"PECHS",type:"Shop",title:"Tenanted Brand Shop — PECHS",price:"PKR 22,000,000",num:22000000,cat:"Tenanted",pay:["Cash"],spec:"Leased shop · Existing tenant",img:U("photo-1472851294608-062f824d29cc"),desc:"Commercial shop with an existing tenant agreement (sample).",rent:"Sample monthly rent: PKR 150,000 — sample gross yield 8.2% on these figures."}
 ];
-function waLink(l){
-  const msg = "Hello Amani Realty Limited, I am interested in property " + l.ref + " (" + l.title + "). Please share details.";
-  return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg).replace(/\(/g, "%28").replace(/\)/g, "%29");
-}
 function card(l){
   return '<article class="card"><div class="img"><img src="' + l.img + '" alt="' + l.title + '" loading="lazy" onerror="this.style.display=\'none\'"></div>'
   + '<div class="body"><span class="badge">SAMPLE LISTING — DEMO ONLY</span>'
-  + '<span class="ref">REF: ' + l.ref + ' · ' + l.country + ' · ' + l.city + '</span>'
+  + '<span class="ref">REF: ' + l.ref + ' · Karachi · ' + l.area + '</span>'
   + '<h3>' + l.title + '</h3><div class="price">' + l.price + '</div>'
-  + '<div class="meta">' + l.spec + ' · ' + l.status + ' · ' + l.pay.join(" / ") + '</div>'
+  + '<div class="meta">' + l.spec + ' · ' + l.cat + ' · ' + l.pay.join(" / ") + '</div>'
   + '<p style="font-family:Arial,Helvetica,sans-serif;font-size:14px">' + l.desc + '</p>'
   + (l.plan ? '<div class="plan">' + l.plan + '</div>' : '')
   + (l.rent ? '<div class="plan">' + l.rent + '</div>' : '')
-  + '<div class="actions"><a class="btn wa small" href="' + waLink(l) + '" target="_blank" rel="noopener">WhatsApp Inquiry</a>'
-  + '<button class="btn small" onclick="prefill(\'' + l.ref + '\')">Enquire</button></div></div></article>';
+  + '<div class="actions"><button class="btn small" onclick="prefillFromListing(\'' + l.ref + '\')">Start Inquiry</button></div></div></article>';
 }
 function currentFilter(){
   const b = document.getElementById("fBudget").value;
-  let bcur = "", bmin = 0, bmax = Infinity;
-  if (b) { const p = b.split("-"); bcur = p[0]; bmin = +p[1]; bmax = +p[2]; }
-  return {country: document.getElementById("fCountry").value, city: document.getElementById("fCity").value,
-    type: document.getElementById("fType").value, pay: document.getElementById("fPay").value,
-    status: document.getElementById("fStatus").value, bcur: bcur, bmin: bmin, bmax: bmax};
+  let bmin = 0, bmax = Infinity;
+  if (b) { const p = b.split("-"); bmin = +p[0]; bmax = +p[1]; }
+  return {area: document.getElementById("fArea").value, cat: document.getElementById("fCat").value,
+    type: document.getElementById("fType").value, pay: document.getElementById("fPay").value, bmin: bmin, bmax: bmax};
 }
 function passes(l, f){
-  if (f.country && l.country !== f.country) return false;
-  if (f.city && l.city !== f.city) return false;
+  if (f.area && l.area !== f.area) return false;
+  if (f.cat && l.cat !== f.cat) return false;
   if (f.type && l.type !== f.type) return false;
   if (f.pay && l.pay.indexOf(f.pay) === -1) return false;
-  if (f.status && l.status !== f.status) return false;
-  if (f.bcur && (l.cur !== f.bcur || l.num < f.bmin || l.num > f.bmax)) return false;
+  if (l.num < f.bmin || l.num > f.bmax) return false;
   return true;
 }
 function render(){
   const f = currentFilter();
-  const groups = {
-    "grid-pakistan": LISTINGS.filter(l => l.country === "Pakistan"),
-    "grid-dubai": LISTINGS.filter(l => l.country === "Dubai"),
-    "grid-offplan": LISTINGS.filter(l => l.status === "Off-Plan"),
-    "grid-rental": LISTINGS.filter(l => l.status === "Tenanted"),
-    "grid-land": LISTINGS.filter(l => l.type === "Land")
-  };
-  const seen = new Set();
-  for (const id in groups){
-    const shown = groups[id].filter(l => passes(l, f));
-    shown.forEach(l => seen.add(l.ref));
-    document.getElementById(id).innerHTML = shown.length ? shown.map(card).join("") : '<div class="empty">No matching properties in this section. Try widening the filters.</div>';
-  }
-  document.getElementById("resultCount").textContent = seen.size + " properties match";
+  const shown = LISTINGS.filter(l => passes(l, f));
+  document.getElementById("grid-karachi").innerHTML = shown.length ? shown.map(card).join("") : '<div class="empty">No matching properties. Try widening the filters.</div>';
+  document.getElementById("resultCount").textContent = shown.length + " properties match";
 }
 function applyFilters(){ render(); document.getElementById("browse").scrollIntoView({behavior:"smooth"}); }
 function resetFilters(){
-  ["fCountry","fCity","fType","fBudget","fPay","fStatus"].forEach(id => document.getElementById(id).value = "");
+  ["fArea","fCat","fType","fBudget","fPay"].forEach(id => document.getElementById(id).value = "");
   render();
 }
-function prefill(ref){
-  document.getElementById("qRef").value = ref;
-  updateFormWa();
-  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-  document.getElementById("qName").focus();
+
+var F = {cat:"", pay:"", fin:"", stage:"", shop:"", area:"", type:"", phone:"", addr:"", inst:"", down:"", otp:false};
+var STEP = 1;
+var STEP_TITLES = {1:"Step 1 of 5 — What are you looking for?", 2:"Step 2 of 5 — Your choice in detail", 3:"Step 3 of 5 — Area and property type", 4:"Step 4 of 5 — Your contact details", 5:"Step 5 of 5 — Verify your number"};
+function sel(rowId, btn){
+  document.querySelectorAll("#" + rowId + " .opt").forEach(o => o.classList.remove("sel"));
+  if (btn) btn.classList.add("sel");
 }
-function updateFormWa(){
-  const ref = document.getElementById("qRef").value;
-  const l = LISTINGS.find(x => x.ref === ref) || LISTINGS[0];
-  document.getElementById("formWa").href = waLink(l);
+function showSub(id){
+  ["sub-ready","sub-offplan","sub-invest"].forEach(s => document.getElementById(s).classList.remove("on"));
+  if (id) document.getElementById(id).classList.add("on");
+}
+function setCat(c, btn){
+  F.cat = c; F.pay = ""; F.fin = ""; F.stage = ""; F.shop = "";
+  sel("catRow", btn);
+  sel("payRow", null); sel("finRow", null); sel("stageRow", null); sel("shopRow", null);
+  document.getElementById("sub-fin").classList.remove("on");
+  showSub(c === "Ready to Move" ? "sub-ready" : c === "Off-Plan" ? "sub-offplan" : "sub-invest");
+}
+function setPay(p, btn){ F.pay = p; sel("payRow", btn); document.getElementById("sub-fin").classList.toggle("on", p === "Installments"); if (p !== "Installments") { F.fin = ""; sel("finRow", null); } }
+function setFin(v, btn){ F.fin = v; sel("finRow", btn); }
+function setStage(v, btn){ F.stage = v; sel("stageRow", btn); }
+function setShop(v, btn){ F.shop = v; sel("shopRow", btn); }
+function setType(v, btn){ F.type = v; sel("typeRow", btn); }
+function syncStep2(){
+  showSub(F.cat === "Ready to Move" ? "sub-ready" : F.cat === "Off-Plan" ? "sub-offplan" : F.cat === "Investment" ? "sub-invest" : null);
+  document.getElementById("sub-fin").classList.toggle("on", F.pay === "Installments");
+  markSel("catRow", F.cat); markSel("payRow", F.pay); markSel("finRow", F.fin); markSel("stageRow", F.stage); markSel("shopRow", F.shop);
+}
+function syncStep3(){
+  document.getElementById("fAreaSel").value = F.area;
+  markSel("typeRow", F.type);
+}
+function markSel(rowId, val){
+  document.querySelectorAll("#" + rowId + " .opt").forEach(o => o.classList.toggle("sel", val && (o.textContent === val || o.getAttribute("data-cat") === val)));
+}
+function showStep(n){
+  STEP = n;
+  [1,2,3,4,5].forEach(i => document.getElementById("step-" + i).classList.toggle("on", i === n));
+  document.getElementById("progressText").textContent = STEP_TITLES[n];
+  document.getElementById("backBtn").disabled = (n === 1);
+  document.getElementById("nextBtn").style.display = (n === 5) ? "none" : "inline-block";
+  document.getElementById("submitBtn").style.display = (n === 5) ? "inline-block" : "none";
+  if (n === 2) syncStep2();
+  if (n === 3) syncStep3();
+  if (n === 4) document.getElementById("sub-capacity").classList.toggle("on", F.cat === "Off-Plan");
+  if (n === 5) document.getElementById("submitBtn").disabled = !F.otp;
+}
+function stepValid(n){
+  if (n === 1) return !!F.cat;
+  if (n === 2){
+    if (F.cat === "Ready to Move") return !!F.pay && (F.pay !== "Installments" || !!F.fin);
+    if (F.cat === "Off-Plan") return !!F.stage;
+    if (F.cat === "Investment") return !!F.shop;
+    return false;
+  }
+  if (n === 3){ F.area = document.getElementById("fAreaSel").value; return !!F.area && !!F.type; }
+  if (n === 4){
+    F.phone = document.getElementById("fPhone").value.trim();
+    F.addr = document.getElementById("fAddr").value.trim();
+    F.inst = document.getElementById("fInst").value.trim();
+    F.down = document.getElementById("fDown").value.trim();
+    if (!F.phone || !F.addr) return false;
+    if (F.cat === "Off-Plan" && (!F.inst || !F.down)) return false;
+    return true;
+  }
+  return true;
+}
+function goNext(){
+  if (!stepValid(STEP)){ alert("Please complete this step before continuing."); return; }
+  if (STEP < 5) showStep(STEP + 1);
+}
+function goBack(){ if (STEP > 1) showStep(STEP - 1); }
+function sendOtp(){
+  if (!stepValid(4)){ alert("Please complete step 4 (number and address) first."); showStep(4); return; }
+  document.getElementById("otpBefore").style.display = "none";
+  document.getElementById("otpAfter").style.display = "block";
+}
+function verifyOtp(){
+  const code = document.getElementById("otpInput").value.trim();
+  const msg = document.getElementById("otpMsg");
+  if (code === "1234"){
+    F.otp = true;
+    document.getElementById("otpAfter").style.display = "none";
+    document.getElementById("otpDone").style.display = "block";
+    document.getElementById("submitBtn").disabled = false;
+  } else {
+    msg.textContent = "That code does not match the demo code (1234). Try again.";
+  }
+}
+function prefillFromListing(ref){
+  const l = LISTINGS.find(x => x.ref === ref);
+  if (!l) return;
+  F.cat = l.cat === "Tenanted" ? "Investment" : l.cat;
+  F.type = l.type; F.area = l.area;
+  markSel("catRow", F.cat);
+  document.getElementById("inquiry").scrollIntoView({behavior:"smooth"});
+  showStep(2);
 }
 function getLeads(){
   try { return JSON.parse(localStorage.getItem("arl_leads") || "[]"); } catch(e){ return []; }
@@ -311,7 +444,7 @@ function renderLeads(){
   const leads = getLeads();
   document.getElementById("noLeads").style.display = leads.length ? "none" : "block";
   document.getElementById("leadsBody").innerHTML = leads.map((ld, i) =>
-    "<tr><td>" + ld.date + "</td><td>" + ld.ref + "</td><td>" + ld.name + "</td><td>" + ld.phone + "</td><td>" + ld.msg + "</td>"
+    "<tr><td>" + ld.date + "</td><td>" + ld.cat + "</td><td>" + ld.area + "</td><td>" + ld.type + "</td><td>" + ld.phone + "</td><td>" + ld.details + "</td><td>" + ld.otp + "</td>"
     + '<td><select onchange="setStatus(' + i + ', this.value)">'
     + ["New","Contacted","Site Visit","Closed"].map(s => '<option' + (s === ld.status ? ' selected' : '') + '>' + s + '</option>').join("")
     + "</select></td></tr>").join("");
@@ -323,12 +456,17 @@ function setStatus(i, s){
 function esc(s){
   const d = document.createElement("div"); d.textContent = s; return d.innerHTML;
 }
-document.getElementById("inquiryForm").addEventListener("submit", function(e){
+document.getElementById("funnelForm").addEventListener("submit", function(e){
   e.preventDefault();
+  if (!F.otp){ alert("Please verify your number first (demo code 1234)."); return; }
+  let detail = "";
+  if (F.cat === "Ready to Move") detail = F.pay + (F.fin ? " · " + F.fin : "");
+  if (F.cat === "Off-Plan") detail = F.stage + " · Inst PKR " + F.inst + "/mo · Down PKR " + F.down;
+  if (F.cat === "Investment") detail = F.shop;
+  detail += " · Lives: " + F.addr;
   const leads = getLeads();
-  leads.unshift({date: new Date().toLocaleDateString(), ref: document.getElementById("qRef").value,
-    name: esc(document.getElementById("qName").value.trim()), phone: esc(document.getElementById("qPhone").value.trim()),
-    msg: esc(document.getElementById("qMsg").value.trim() || "Interested — please share details."), status: "New"});
+  leads.unshift({date: new Date().toLocaleDateString(), cat: F.cat, area: esc(F.area), type: F.type,
+    phone: esc(F.phone), details: esc(detail), otp: "✓ Verified (demo)", status: "New"});
   saveLeads(leads);
   renderLeads();
   document.getElementById("formDone").style.display = "block";
@@ -345,10 +483,6 @@ function calcYield(){
   document.getElementById("netOut").textContent = net.toFixed(2) + "%";
 }
 (function init(){
-  const sel = document.getElementById("qRef");
-  LISTINGS.forEach(l => { const o = document.createElement("option"); o.value = l.ref; o.textContent = l.ref + " — " + l.title; sel.appendChild(o); });
-  sel.addEventListener("change", updateFormWa);
-  updateFormWa();
   render();
   renderLeads();
   calcYield();
